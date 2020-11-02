@@ -10,11 +10,9 @@ import Modal from 'react-modal'
 
 
 const CustomModal = () => {
+  Modal.setAppElement('#root')
     const [modalIsOpen,setIsOpen] = useState(false);
     const {x, y} = useMousePosition()
-  
- 
-    
 
   function closeModal(){
     setIsOpen(false);
@@ -29,7 +27,7 @@ const CustomModal = () => {
       useEffect(() => {
         setTimeout(() => {
             setIsOpen(true)
-        },3000)
+        },30000)
       },[])
     
     return (

@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import Features from './components/Features'
+import Carousel from './components/Carousel'
+import Extensions from './components/Extensions'
+import Newsletter from './components/Newsletter'
+import Footer from './components/Footer'
+import FAQ from './components/FAQ'
+import PhoneNav from './components/PhoneNav'
+import CustomModal from './components/UI/CustomModal'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <CustomModal />
+      <Nav />
+      <PhoneNav />
+      <Hero />
+      <Features />
+      <Carousel />
+      <Extensions />
+      <FAQ />
+      <Newsletter />
+      <Footer />
     </div>
   );
 }

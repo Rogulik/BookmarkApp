@@ -1,0 +1,76 @@
+@import './base.scss';
+
+.tab{
+    &__box{
+        position: relative;
+        margin-right: 2rem;
+
+        @media only screen and (max-width: $bp-phone) {
+            margin-right: 10rem;
+            width: 100%;
+          }
+        
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 6rem;
+
+        @media only screen and (max-width: $bp-phone) {
+           flex-direction: column;
+           margin-top: 0;
+         }
+    }
+
+    &__text{
+        font-size: 2.5rem;
+        width: 65rem;
+        margin: 2rem 0;
+        font-weight: 200;
+
+        @media only screen and (max-width: $bp-phone) {
+            width: 100%;
+            font-size: 2rem;
+
+        }
+
+    }
+
+    &__image-container{
+        background-color: rgb(174, 164, 218);
+        @media only screen and (max-width: $bp-phone) {
+            text-align: center;
+            width: 100%;
+            transform: scale(0.6);
+            margin-top: 0rem;
+         }
+    }
+
+    
+
+    &__text-box{
+        @media only screen and (max-width: $bp-phone) {
+           text-align: center;
+           margin-top: 0rem;
+        }
+    }
+}
+
+.blue-bg--other{
+    position: absolute;
+    z-index: -2;
+    bottom: -10rem;
+    left: -30rem;
+    background-color: $color-primary;
+    width: 80rem;
+    height: 40rem;
+    border: 5px solid #1c6ea400;
+    border-radius: 0px 180px 180px 0px;  
+    
+    @media only screen and (max-width: $bp-phone) {
+        height: 27rem;
+        bottom: 4rem;
+     }
+}

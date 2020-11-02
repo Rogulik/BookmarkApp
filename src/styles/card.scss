@@ -1,0 +1,37 @@
+@import './base.scss';
+
+.card{
+    display: flex;
+    width: 35rem;
+    height: 45rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 8px 14px -4px rgba(0,0,0,0.37);
+    border-radius: 10px;
+   
+    @media only screen and (max-width: $bp-phone) {
+       
+    }
+
+    &__text-box{
+        text-align: center;
+    }
+    &__button-box{
+        text-align: center;
+        width: 100%;
+
+        @media only screen and (max-width: $bp-phone) {
+            
+        }
+    }
+    &__text{
+        font-size: 1.8rem;
+        margin-top: .5rem;
+    }
+    &--button{
+        padding: 3rem;
+        width: 80%;
+    }
+}
+

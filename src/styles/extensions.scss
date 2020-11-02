@@ -1,0 +1,60 @@
+@import './base.scss';
+
+.extensions{
+    grid-column: center-start / center-end;
+    margin-top: 20rem;
+    padding-bottom: 10rem;
+
+    @media only screen and (max-width: $bp-phone) {
+        margin-top: 20rem;
+        grid-column: full-start / full-end;
+      }
+
+    &__logo{
+        @media only screen and (max-width: $bp-phone) {
+            transform: scale(0.8);
+        }
+    }
+    
+    &__cards{
+        display: flex;
+        justify-content: space-evenly;
+
+        @media only screen and (max-width: $bp-phone) {
+           flex-direction: column;
+           align-items: center;
+          
+        }
+    }
+
+    &__text-box{
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+
+    &__text{
+        margin-top: 2.5rem;
+        font-size: 2rem;
+        padding: 0 35rem;
+        font-weight: 200;
+
+        @media only screen and (max-width: $bp-phone) {
+            padding: 0 1rem;
+        }
+    }
+
+    &__box{
+        &--2{
+            margin-top: 5rem;
+            @media only screen and (max-width: $bp-phone) {
+                margin-top: 0;
+              }
+        }
+        &--3{
+            margin-top: 10rem;
+            @media only screen and (max-width: $bp-phone) {
+                margin-top: 0;
+              }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@import './base.scss';
+
+.hero{
+    grid-column: center-start / full-end;
+    display: flex;
+    margin-top: 10rem;
+    position: relative;
+
+    @media only screen and (max-width: $bp-phone) {
+        grid-column: full-start / full-end;
+        flex-direction: column-reverse;
+        margin-top: 0;
+        width: 100%;
+    }
+    &__container{
+        align-self: center;
+        z-index: 10;
+
+        @media only screen and (max-width: $bp-phone) {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin-top: -3rem;
+        }
+    }
+    &__pic{
+        @media only screen and (max-width: $bp-phone) {
+           transform: scale(0.5);
+           margin-right: 3rem;
+        }
+    }
+    
+    &__text{
+        font-size: 2.4rem;
+        font-weight: 200;
+        padding: 3rem 12rem 3rem 0;
+
+        @media only screen and (max-width: $bp-phone) {
+            padding: 0;
+            font-size: 2rem;
+            padding: 2rem 0 2rem 0;
+        }
+        
+    }
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        width: 73%;
+
+        @media only screen and (max-width: $bp-phone) {
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+    .blue-bg{
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        background-color: $color-primary;
+        width: 60rem;
+        height: 40rem;
+        border: 5px solid #1c6ea400;
+        border-radius: 150px 0px 0px 150px;   
+
+        @media only screen and (max-width: $bp-phone) {
+            bottom: 350px;
+            right: 0;
+            width: 35rem;
+            height: 25rem;
+        }
+    }
+}

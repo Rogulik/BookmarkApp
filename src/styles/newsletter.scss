@@ -1,0 +1,100 @@
+@import './base.scss';
+
+.newsletter{
+    grid-column: full-start / full-end;
+    background-color: $color-primary;
+    margin-top: 20rem;
+    height: 52rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    &__form{
+        display: flex;
+        align-items: flex-start;
+        height: 15rem;
+
+        @media only screen and (max-width: $bp-phone) {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+         }
+    }
+
+    @media only screen and (max-width: $bp-phone) {
+        width: 100%;
+     }
+
+    &__counter{
+        letter-spacing: 1rem;
+        font-size: 2rem;
+    }
+
+    &__input{
+        font-family: $font-primary;
+        font-size: 1.8rem;
+        width: 35rem;
+        padding: 1.8rem 2rem;
+        border: none;
+        border-radius: 5px;
+        z-index: 2;
+        @media only screen and (max-width: $bp-phone) {
+            width: 40rem;
+            margin-right: 0;
+        }
+
+        &-invalid{
+            border: 3px solid $color-secondary;
+        }
+
+        &::placeholder{
+            color: rgba(0, 0, 0, 0.212);
+        }
+    }
+
+    &__header{
+        padding: 0 40rem;
+
+        @media only screen and (max-width: $bp-phone) {
+            padding: 0 2rem;
+         }
+    }
+    &__button{
+        width: 40rem;
+        
+        @media only screen and (max-width: $bp-phone) {
+            margin-top: 2rem;
+         }
+    }
+
+    &__input-container{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-right: 2rem;
+
+        @media only screen and (max-width: $bp-phone) {
+            margin-right: 0;
+         }
+    }
+    &__error{
+        width: 100%;
+        background-color: $color-secondary;
+        border-radius: 5px;
+        font-style: italic;
+        text-align: left;
+        margin-top: -.5rem;
+        padding: 0.5rem;
+        z-index: 1;
+
+        &-icon{
+            position: absolute;
+            top:22px;
+            right: 20px;
+            z-index: 3;
+        }
+    }
+}

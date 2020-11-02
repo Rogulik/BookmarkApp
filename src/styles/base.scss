@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+// COLOR VARIABLES
+$color-primary: hsl(231, 69%, 60%);
+$color-primary-dark: hsl(229, 31%, 21%);
+$color-primary-opacity: hsla(229, 31%, 21%, 0.849);
+
+$color-secondary: hsl(0, 94%, 66%);
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1:hsl(229, 8%, 60%);
+
+// FONT VARIABLES
+$font-primary: 'Rubik', sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-phone: 23.5em;    //375px
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-phone) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey-dark-1;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-rows: min-content 80vh min-content 40vw repeat(4, min-content);
+    grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 18rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-phone) {
+        grid-template-rows: 6rem repeat(7,min-content); 
+        grid-template-columns: [full-start] [center-start] repeat(8, [col-start] minmax(min-content, max-content) [col-end]) [center-end] [full-end];
+    }
+   
+}

@@ -1,0 +1,49 @@
+@import './base.scss';
+
+.carousel{
+    grid-column: full-start / full-end;
+    margin-top: 8rem;
+
+    @media only screen and (max-width: $bp-phone) {
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+
+        @media only screen and (max-width: $bp-phone) {
+            flex-direction: column;
+        }
+       
+    }
+    &__item{
+        font-size: 2rem;
+        padding: 2rem 2rem;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.164);
+        transition: all .2s;
+        &:hover{
+            cursor: pointer;
+            color: $color-secondary
+        }
+        @media only screen and (max-width: $bp-phone) {
+           width: 30rem;
+           text-align: center;
+           border-top: 1px solid rgba(128, 128, 128, 0.164);
+        }
+    }
+    &__image{
+       
+        @media only screen and (max-width: $bp-phone) {
+           
+         }
+    }
+    
+}
+
+.react-tabs__tab--selected{
+    border-bottom: 3px solid $color-secondary;
+}
